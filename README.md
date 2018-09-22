@@ -10,11 +10,11 @@
 
     npm install
 
-### Run dev server:
+### Run dev server
 
     npm start
 
-### Run tests:
+### Run tests
 
     npm test
 
