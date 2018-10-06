@@ -1,21 +1,13 @@
-import React from 'react'
-import classes from './NavigationItems.css';
-import NavigationItem from './NavigationItem/NavigationItem'
+import React from 'react';
 
-const navigationItems = (props) => {
-  const navigationItems = [
-    { link: "/", name: "Burger Builder", active: true },
-    { link: "/", name: "Checkout" }
-  ];
-  
-  return(
+import classes from './NavigationItems.css';
+import NavigationItem from './NavigationItem/NavigationItem';
+
+const navigationItems = () => (
     <ul className={classes.NavigationItems}>
-     {navigationItems.map((e, $indx) => 
-      <NavigationItem 
-        link={e.link} 
-        active={e.active} 
-        key={$indx}>{e.name}</NavigationItem> )}
+        <NavigationItem link="/" exact>Burger Builder</NavigationItem>
+        <NavigationItem link="/orders">Orders</NavigationItem>
     </ul>
-  )
-}
+);
+
 export default navigationItems;

@@ -11,21 +11,21 @@ class OrderSummary extends Component {
   }
 
   render() {
-    const ingrediensSummary = Object.keys(this.props.ingrediens)
+    const ingredientsSummary = Object.keys(this.props.ingredients)
     .map((ingr) => {
       return ( 
         <li key={ingr}>
           <span style={{ textTransform: "capitalize" }}>{ingr}: </span>
-          {this.props.ingrediens[ingr]}
+          {this.props.ingredients[ingr]}
         </li>
       )
     });
     return(
       <Aux>
         <h3>Your Order</h3>
-        <p>A delicious burger with following ingrediens:</p>
+        <p>A delicious burger with following ingredients:</p>
         <ul>
-          {ingrediensSummary}
+          {ingredientsSummary}
         </ul>
         <p><strong>Total Price: {this.props.totalPrice.toFixed(2)}</strong></p>
         <p>Continue to checkout</p>
