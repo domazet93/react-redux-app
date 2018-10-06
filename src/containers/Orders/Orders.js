@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import classes from "./Orders.css";
 import Order from "../../components/Order/Order";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import axios from "../../axios-orders";
@@ -41,7 +41,11 @@ class Orders extends Component {
     if (this.state.loading) {
       order = <Spinner />;
     }
-    return <div>{order}</div>;
+
+    if (!this.state.orders.length) {
+      order = <strong>No Orders</strong>;
+    }
+    return <div className={classes.Orders}>{order}</div>;
   }
 }
 
