@@ -5,11 +5,9 @@ import classes from "./CheckoutSummary.css";
 
 const checkoutSummary = props => {
   return (
-    <div className={classes.CheckoutSummarys}>
-      <div style={{ width: "100%", margin: "auto" }}>
-        <h1>We hope it taste well!</h1>
-        <Burger ingrediens={props.ingrediens} />
-      </div>
+    <div className={classes.CheckoutSummary}>
+      <h1>We hope it taste well!</h1>
+      <Burger ingrediens={props.ingrediens} />
       <Button btnType="Danger" clicked={props.checkoutCancelled}>
         CANCEL
       </Button>
